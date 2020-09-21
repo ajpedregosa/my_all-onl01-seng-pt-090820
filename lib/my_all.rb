@@ -2,28 +2,10 @@ require 'pry'
 
 def my_all?(collection)
   i = 0
+  block_return_values = []
   while i < collection.length
     yield(collection[i])
     i += 1
   end
 end
 
-def hello_t(array)
-    i = 0
-
-    while i < array.length
-      yield array[i]
-      i = i + 1
-    end
-  
-    array
-  end
-end
-
-# call your method here!
-
-hello_t(["Tim", "Tom", "Jim"]) do |name|
-  if name.start_with?("T")
-    puts "Hi, #{name}"
-  end
-end
